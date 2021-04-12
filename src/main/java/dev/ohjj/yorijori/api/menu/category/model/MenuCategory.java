@@ -18,9 +18,9 @@ public class MenuCategory {
     private final LocalDateTime modifiedAt;
     private final Long modifier;
 
-    public static MenuCategory from(Long userSeq, Long restaurantSeq, String name,
+    public static MenuCategory from(Long seq, Long restaurantSeq, String name,
                                     Boolean exposed, Integer viewOrder, LocalDateTime createdAt,
                                     Long creator, LocalDateTime modifiedAt, Long modifier) {
-        return new MenuCategory(userSeq, restaurantSeq, name, exposed, viewOrder, createdAt, creator, modifiedAt, modifier);
+        return new MenuCategory(seq, restaurantSeq, name, exposed, viewOrder, createdAt, creator, modifiedAt, modifier);
     }
 }

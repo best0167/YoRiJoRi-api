@@ -1,10 +1,9 @@
 ### 메뉴 카테고리 리스트 조회
-
-GET http://{{apiUrl}}/restaurant/1/menu/categories
+GET http://{{apiUrl}}/restaurants/1/menu-categories
 Accept: application/json
 
 ### 메뉴 카테고리 생성(추가)
-POST http://{{apiUrl}}/restaurant/1/menu/category?userSeq=1
+POST http://{{apiUrl}}/restaurants/1/menu-category?userSeq=1
 Content-Type: application/json
 
 {
@@ -13,3 +12,24 @@ Content-Type: application/json
     "viewOrder": 1
 }
 
+### 메뉴 리스트 조회
+GET http://{{apiUrl}}/restaurants/1/menu-categories/1/menus
+Accept: application/json
+
+### 메뉴 생성(추가)
+POST http://{{apiUrl}}/restaurants/1/menu-categories/1/menus?userSeq=1
+Content-Type: application/json
+
+{
+    "name": "찜닭",
+    "description": "찜닭은 맛있다.",
+    "price": 20000,
+    "exposed": true,
+    "ageRestricted": true,
+    "represented": false,
+    "viewOrder": 1
+}
+
+### 메뉴 조회
+GET http://{{apiUrl}}/restaurants/1/menu-categories/1/menus/1
+Accept: application/json
